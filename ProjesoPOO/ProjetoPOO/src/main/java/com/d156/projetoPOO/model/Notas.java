@@ -14,7 +14,8 @@ public class Notas extends Aluno{
     private double Nota2;
     private double Nota3;
     private double Nota4;
-    private String Materia;
+    private double media;
+    private double Materia;
 
     public Notas() {
     }
@@ -59,14 +60,21 @@ public class Notas extends Aluno{
         this.Nota4 = Nota4;
     }
 
-    public String getMateria() {
+    public double getMedia() {
+        return media;
+    }
+
+    public void setMedia(double media) {
+        this.media = media;
+    }
+
+    public double getMateria() {
         return Materia;
     }
 
-    public void setMateria(String Materia) {
+    public void setMateria(double Materia) {
         this.Materia = Materia;
     }
-    
-    
+
 
 }

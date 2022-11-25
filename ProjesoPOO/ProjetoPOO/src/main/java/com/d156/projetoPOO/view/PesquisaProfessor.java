@@ -46,7 +46,7 @@ public class PesquisaProfessor extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Código do Cliente", "Nome", "CPF"
+                "Código do Professor", "Nome", "CPF"
             }
         ) {
             Class[] types = new Class [] {

@@ -13,12 +13,21 @@ public class Aluno extends Pessoa implements MetodosAluno{
    
     private String Status;
     private String Responsavel;
+    private String Situacao;
 
     public Aluno() {
     }
 
     public int getIdAluno() {
         return idAluno;
+    }
+
+    public String getSituacao() {
+        return Situacao;
+    }
+
+    public void setSituacao(String Situacao) {
+        this.Situacao = Situacao;
     }
 
     public void setIdAluno(int idAluno) {
@@ -43,18 +52,14 @@ public class Aluno extends Pessoa implements MetodosAluno{
         this.Responsavel = Responsavel;
     }
 
+    //codigo que gera a media do aluno
     @Override
-    public void CalculoMedia(double nota1, double nota2, double nota3, double nota4) {
+    public double CalculoMedia(double nota1, double nota2, double nota3, double nota4) {
   
         double media = (nota1+nota2+nota3+nota4)/4;    
-    
+            
+        return media;
     }
-
-  
-
     
-
-    
-
    
 }

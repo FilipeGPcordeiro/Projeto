@@ -43,7 +43,6 @@ public class TelaInicial extends javax.swing.JFrame {
         mnuAlterarProf = new javax.swing.JMenuItem();
         mnuRelatorios = new javax.swing.JMenu();
         mnuSintetico = new javax.swing.JMenuItem();
-        mnuAnalitico = new javax.swing.JMenuItem();
         mnuVendas = new javax.swing.JMenu();
         mnuNovaVenda = new javax.swing.JMenuItem();
 
@@ -110,22 +109,13 @@ public class TelaInicial extends javax.swing.JFrame {
         mnuRelatorios.setText("Relatórios");
 
         mnuSintetico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/custom-reports-icon.png"))); // NOI18N
-        mnuSintetico.setText("Relatórios Sintético");
+        mnuSintetico.setText("Relatórios de notas");
         mnuSintetico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mnuSinteticoActionPerformed(evt);
             }
         });
         mnuRelatorios.add(mnuSintetico);
-
-        mnuAnalitico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/custom-reports-icon.png"))); // NOI18N
-        mnuAnalitico.setText("Relatorio Analítico");
-        mnuAnalitico.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mnuAnaliticoActionPerformed(evt);
-            }
-        });
-        mnuRelatorios.add(mnuAnalitico);
 
         mnuBarra.add(mnuRelatorios);
 
@@ -186,10 +176,12 @@ qnotas.setVisible(true);
     }//GEN-LAST:event_mnuAlterarProfActionPerformed
 
     private void mnuSinteticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuSinteticoActionPerformed
-    }//GEN-LAST:event_mnuSinteticoActionPerformed
 
-    private void mnuAnaliticoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAnaliticoActionPerformed
-    }//GEN-LAST:event_mnuAnaliticoActionPerformed
+        RelatoriodeNotas rln = new RelatoriodeNotas();
+        rln.setVisible(true);
+
+
+    }//GEN-LAST:event_mnuSinteticoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -231,7 +223,6 @@ qnotas.setVisible(true);
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem mnuAlterarAlu;
     private javax.swing.JMenuItem mnuAlterarProf;
-    private javax.swing.JMenuItem mnuAnalitico;
     private javax.swing.JMenuBar mnuBarra;
     private javax.swing.JMenu mnuCadastro;
     private javax.swing.JMenuItem mnuCadastroAlu;

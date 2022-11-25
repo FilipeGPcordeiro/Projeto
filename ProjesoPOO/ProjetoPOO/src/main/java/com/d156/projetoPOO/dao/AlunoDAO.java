@@ -41,6 +41,7 @@ public class AlunoDAO {
             sql.setString(12, obj.getTelefone());
             sql.setString(13, obj.getEstadocivil());
             sql.setString(14, obj.getResponsavel());
+            sql.setString(16, obj.getSituacao());
             int linhasAfetadas = sql.executeUpdate();
             if (linhasAfetadas > 0) {
                 retorno = true;

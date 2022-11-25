@@ -12,7 +12,7 @@ public class Professor extends Pessoa implements MetodosProfessor{
     
     private int idProfessor;
     private String Materia;
-    private double Salario;
+    private String Salario;
 
     public int getIdProfessor() {
         return idProfessor;
@@ -30,13 +30,14 @@ public class Professor extends Pessoa implements MetodosProfessor{
         this.Materia = Materia;
     }
 
-    public double getSalario() {
+    public String getSalario() {
         return Salario;
     }
 
-    public void setSalario(double Salario) {
+    public void setSalario(String Salario) {
         this.Salario = Salario;
     }
 
+ 
    
 }

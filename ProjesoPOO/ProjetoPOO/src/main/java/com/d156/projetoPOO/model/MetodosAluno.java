@@ -10,8 +10,6 @@ package com.d156.projetoPOO.model;
  */
 public interface MetodosAluno {
     
-    public void CalculoMedia(double nota1,double nota2,double nota3,double nota4);
-    
-     
+    public double CalculoMedia(double nota1,double nota2,double nota3,double nota4);
    
 }

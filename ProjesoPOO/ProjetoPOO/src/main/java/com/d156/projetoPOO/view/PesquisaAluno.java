@@ -46,11 +46,11 @@ public class PesquisaAluno extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Código do Cliente", "Nome", "CPF"
+                "Código do Aluno", "Nome", "CPF", "Situação"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
             };
 
             public Class getColumnClass(int columnIndex) {

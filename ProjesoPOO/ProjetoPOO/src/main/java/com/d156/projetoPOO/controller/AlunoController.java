@@ -18,7 +18,7 @@ import java.util.Date;
 public class AlunoController {
     
     // Inserção de clientes.
-    public static boolean salvar(String nome,String responsavel, String cpf, String endereco,String numero, String estadoCivil, String telefone,
+    public static boolean salvar(String situacao,String nome,String responsavel, String cpf, String endereco,String numero, String estadoCivil, String telefone,
             String genero, String dataNascimento,  String bairro, String cidade, String cep, String estado) {
         Aluno obj = new Aluno();
         obj.setNome(nome);
@@ -34,22 +34,24 @@ public class AlunoController {
         obj.setCEP(cep);
         obj.setEstado(estado);
         obj.setResponsavel(responsavel);
+        obj.setSituacao(situacao);
         return AlunoDAO.salvar(obj);
     }
     
     
-    public static boolean inserirNota(int idaluno,double nota1,double nota2,double nota3,double nota4){
+    public static boolean inserirNota(int idaluno,double nota1,double nota2,double nota3,double nota4,double media){
 Notas qnotas  = new Notas();
 qnotas.setNota1(nota1);
 qnotas.setNota2(nota2);
 qnotas.setNota3(nota3);
 qnotas.setNota4(nota4);
+qnotas.setMedia(media);
 qnotas.setIdAluno(idaluno);
 return AlunoDAO.salvarNota(qnotas);
     }
 
     // Alteração de clientes.
-    public static boolean alterar(int id, String nome, String endereco, String numero,String responsavel , String estadoCivil, String telefone,
+    public static boolean alterar(String situacao,int id, String nome, String endereco, String numero,String responsavel , String estadoCivil, String telefone,
             String genero, String dataNascimento, String cpf,String bairro, String cidade, String cep, String estado) {
          Aluno obj = new Aluno();
         obj.setNome(nome);
@@ -65,6 +67,7 @@ return AlunoDAO.salvarNota(qnotas);
         obj.setCEP(cep);
         obj.setEstado(estado);
         obj.setCPF(cpf);
+        obj.setSituacao(situacao);
         return AlunoDAO.salvar(obj);
     }
 
